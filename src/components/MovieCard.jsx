@@ -4,17 +4,20 @@ import PropTypes from 'prop-types';
 
 export class MovieCard extends Component {
   render() {
-    const { movies: { title, subtitle, storyline, rating, imagePath } } = this.props;
+    const { movie: { title, subtitle, storyline, imagePath, rating } } = this.props;
     return (
       <div>
-        <h1>{ title }</h1>
+        <h4 className="page-title">{ title }</h4>
+        <img src={ imagePath } alt={ title } />
+        <h5>{ subtitle }</h5>
+        <p>{ storyline }</p>
       </div>
     );
   }
 }
 
 MovieCard.propTypes = {
-  movies: PropTypes.arrayOf(
+  movie: PropTypes.arrayOf(
     PropTypes.shape(
       { title: PropTypes.string,
         subtitle: PropTypes.string,
@@ -24,4 +27,5 @@ MovieCard.propTypes = {
     ),
   ).isRequired,
 };
+
 export default MovieCard;
