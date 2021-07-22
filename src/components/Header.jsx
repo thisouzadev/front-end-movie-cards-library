@@ -1,7 +1,7 @@
 // implement Header component here
 import React, { Component } from 'react';
 
-export class Header extends Component {
+class Header extends Component {
   render() {
     return (
       <header className="movie-card-header">

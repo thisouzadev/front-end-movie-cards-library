@@ -3,12 +3,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import MovieCard from './MovieCard';
 
-export class MovieList extends Component {
+class MovieList extends Component {
   render() {
     const { movies } = this.props;
     return (
       <div className="movie-list">
-        {movies.map((data) => <MovieCard key={ movies.title } movie={ data } />)}
+        {movies.map((data) => <MovieCard key={ data.title } movie={ data } />)}
       </div>
     );
   }
