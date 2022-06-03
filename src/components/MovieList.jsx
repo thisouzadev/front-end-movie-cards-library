@@ -8,7 +8,7 @@ class MovieList extends Component {
     const { movies } = this.props;
     return (
       <div className="movie-list">
-        {movies.map((data) => <MovieCard key={ data.title } movie={ data } />)}
+        { movies.map((data) => <MovieCard key={ data.title } movie={ data } />)}
       </div>
     );
   }
@@ -21,7 +21,7 @@ MovieList.propTypes = {
         subtitle: PropTypes.string,
         storyline: PropTypes.string,
         rating: PropTypes.number,
-        imagePath: PropTypes.string }.isRequired,
+        imagePath: PropTypes.string },
     ),
   ).isRequired,
 };
